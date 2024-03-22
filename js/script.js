@@ -43,9 +43,26 @@ document.addEventListener('click', function(e){
 
 //Modal Box
 const itemDetailModal = document.querySelector('#item-detail-modal');
-const itemDetailButton = document.querySelector('.item-detail.button');
+const itemDetailButtons = document.querySelectorAll('.item-detail-button');
 
-itemDetailButton.onclick = (e) => {
-    itemDetailModal.style.display ='flex';
+itemDetailButtons.forEach((btn) => {
+    btn.onclick = (e) => {
+        itemDetailModal.style.display ='flex';
+        e.preventDefault();
+    };
+});
+
+
+
+// Click Tombol Close
+document.querySelector('.modal .close-icon').onclick = (e) => {
+    itemDetailModal.style.display ='none';
     e.preventDefault();
-};
+}
+
+// Click diluar modal
+window.onclick = (e) => {
+    if(e.target === itemDetailModal){
+        itemDetailModal.style.display = 'none';
+    }
+}

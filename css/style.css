@@ -487,6 +487,21 @@ footer .credit a{
     padding: 1.2rem;
     border: 1px solid #666;
     width: 80%;
+    animation: animateModal 0.5s;
+    
+}
+
+/* Modal Animation */
+@keyframes animateModal {
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+
+    to{
+        top: 0;
+        opacity: 1;
+    }
 }
 
 .modal-container .close-icon{
@@ -501,7 +516,7 @@ footer .credit a{
 
 
 .modal-content img{
-    height: 20rem;
+    height: 17rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
 }
